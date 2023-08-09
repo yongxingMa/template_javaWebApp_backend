@@ -49,5 +49,4 @@ stages:          # List of stages for jobs, and their order of execution
   environment: production
   script:
     - echo "Deploying application..."
-    - ssh root@123.57.131.158 "cd /data/demo-guanshui/java_demo && pwd && git pull && sh run.sh"
     - echo "Application successfully deployed."
