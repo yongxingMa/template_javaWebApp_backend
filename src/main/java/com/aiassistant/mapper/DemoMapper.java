@@ -1,36 +1,36 @@
 package com.aiassistant.mapper;
 
-import com.aiassistant.model.Target;
+import com.aiassistant.model.Demo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 /**
- * 持久化层--目标Mapper
+ * 持久化层--DemoMapper
  */
 @Mapper
-public interface TargetMapper {
+public interface DemoMapper {
 
     /**
      * 插入一条目录记录
      *
-     * @param target
+     * @param demo
      */
-    Target insertTarget(Target target);
+    Demo insertDemo(Demo demo);
 
     /**
      * 查询所有目录记录
      *
      * @return
      */
-    List<Target> getTargetList();
+    List<Demo> getDemoList();
 
     /**
-     * 根据Id查询目标
+     * 根据Id查询
      *
      * @param id
      * @return
      */
-    Target selectById(@Param("id") Integer id);
+    Demo selectById(@Param("id") Integer id);
 }
