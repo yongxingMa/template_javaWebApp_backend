@@ -34,3 +34,5 @@ jobs:
       run: pwd
     - name: ls
       run: ls -alh
+    - name: ls target
+      run: ls target
