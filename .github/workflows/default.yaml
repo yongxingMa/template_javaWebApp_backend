@@ -30,3 +30,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean package
+    - name: dir
+      run: pwd
+    - name: ls
+      run: ls -alh
