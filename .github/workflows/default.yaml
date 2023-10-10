@@ -30,9 +30,11 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean package
-    - name: dir
-      run: pwd
-    - name: ls
-      run: ls -alh
-    - name: ls target
-      run: ls target
+    - name: Run Docker Build Script
+      env:
+        DOCKER_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        DOCKER_REPO: ${{ vars.DOCKERHUB_REPO }}
+      run: |
+        chmod +x docker-build.sh
+        ./docker-build.sh
